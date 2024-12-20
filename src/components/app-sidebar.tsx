@@ -173,7 +173,13 @@ export function AppSidebar() {
                     <Settings />
                     <span>Manage Account</span>
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="cursor-pointer" onClick={() => signOut()}>
+                  <DropdownMenuItem
+                    className="cursor-pointer"
+                    onClick={() => {
+                      router.push("https://poetic-goat-63.accounts.dev/sign-in");
+                      signOut();
+                    }}
+                  >
                     <LogOut />
                     <span>Sign out</span>
                   </DropdownMenuItem>

@@ -21,7 +21,7 @@ export default function PaymentPage() {
     const TOKEN_COUNT = 5;
 
     const handleClick = async () => {
-        showMessage("Оплату в обробці", `Чекайте поки ваш платіж буде оброблено...`, false);
+        showMessage("Оплата в обробці", `Чекайте поки ваш платіж буде оброблено...`, false);
         try {
             const response = await axios.post("/api/payment", { userId });
             const success = response.data.success;

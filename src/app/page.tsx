@@ -57,7 +57,7 @@ export default function Home() {
           'Content-Type': 'multipart/form-data'
         }
       });
-      
+
       setFile(null);
 
       const endTime = Date.now();
@@ -87,8 +87,8 @@ export default function Home() {
 
       await saveTranscriptToDB(transcriptData, userId as string);
 
-      // const url = `/history/${timeForTitle}`;
-      // window.location.href = url;
+      const url = `/history/${timeForTitle}`;
+      window.location.href = url;
     } catch (error) {
       console.error('Error uploading file:', error);
     } finally {
@@ -161,14 +161,14 @@ export default function Home() {
       <br />
 
 
-      {transcript && (
+      {/* {transcript && (
         <InfoBlocks language={language} processingTime={processingTime} wordCount={wordCount} />
       )}
       <br />
 
       {transcript && (
         <ResultBlock transcript={transcript} />
-      )}
+      )} */}
     </>
   );
 }
