@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "History" ALTER COLUMN "title" DROP DEFAULT,
+ALTER COLUMN "title" SET DATA TYPE TEXT;
